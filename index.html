@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript week1</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="box1">
+        <h1 id="demo" onmouseover="changeColor()">This color Red, Blue,Green. <br> This color Red, Blue,Green. <br> This color Red, Blue,Green. <br> This color Red, Blue,Green.</h1>
+        <button class="btn1" onclick="Function1()">Function1</button>
+        <button class="btn2" onclick="Function2()">Function2</button>
+        <button class="btn3" onclick="Function3()">Function3</button>
+
+        <form>
+            <input class="#btn" type="button" value="Reset Function" onclick="Function4()"/>
+            <img src="reset.gif" alt="">
+        </form>
+    </div>
+
+    <script>
+        var colors = ["red", "blue", "green"];
+        var currentColorIndex = 0;
+
+        function changeColor() {
+            document.getElementById("demo").style.color = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        function Function1(){
+            document.getElementById("demo").style.color = "red";
+        }
+
+        function Function2(){
+            document.getElementById("demo").style.color = "blue";
+        }
+
+        function Function3(){
+            document.getElementById("demo").style.color = "green";
+        }
+
+        function Function4() {
+            document.getElementById("demo").style.color = "black";
+        }
+    </script>
+
+</body>
+</html>
+
+
